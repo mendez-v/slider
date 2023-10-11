@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+  display: grid;
+  place-content: center;
+  background-color: #0a0814;
+}
+.slider {
+  display: flex;
+  inline-size: 300px;
+  aspect-ratio: 10 / 16;
+  overflow: scroll; /* los imgs que no caben lo ocultamos con scroll */
+  scroll-snap-type: x mandatory;  /* scroll horizontal y quedará un punto obligatorio */
+  position: relative;
+}
+.slider img {
+  inline-size: 100%;
+  position: sticky;
+  left: 0;
+  object-fit: cover;
+  border-radius: 5px;
+  scroll-snap-align: center;  /* al scrolear le aliene al centro */
+}
